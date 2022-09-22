@@ -1,0 +1,86 @@
+site_name: Knowledge-Stack
+site_url: https://knowledge-stack.kelvinjoson.com
+repo_url: https://github.com/KelvinJoson/knowledge-stack
+repo_name: KelvinJoson/knowledge-stack
+copyright: Copyright &copy; 2022 Kelvin Joson
+theme:
+  font: false
+  name: material
+  # custom_dir: overrides
+  icon:
+    logo: material/library
+    repo: fontawesome/brands/github
+    edit: material/file-document-edit
+  features:
+    - navigation.instant
+    - navigation.tracking
+
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to Dark Mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to Light Mode
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/KelvinJoson
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/kelvinjoson/
+#  analytics:
+#    provider: google
+#    property: G-XXXXXXXXXX
+#  consent:
+#    title: Cookie consent
+#    description: >-
+#      We use cookies to recognize your repeated visits and preferences, as well
+#      as to measure the effectiveness of our documentation and whether users
+#      find what they're searching for. With your consent, you're helping us to
+#      make our documentation better.
+markdown_extensions:
+  - admonition
+  - nl2br
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - footnotes
+  - def_list
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - toc:
+      permalink: ⚑
+      baselevel: 1
+
+plugins:
+  - search
+  - roamlinks
+  - callouts
+  - git-revision-date-localized:
+      enable_creation_date: false
+      type: timeago
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
