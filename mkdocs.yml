@@ -2,6 +2,8 @@ site_name: Knowledge-Stack
 site_url: https://knowledge-stack.kelvinjoson.com
 repo_url: https://github.com/KelvinJoson/knowledge-stack
 repo_name: KelvinJoson/knowledge-stack
+site_description: Knowledge-Stack by Kelvin Joson
+site_author: Kelvin Joson
 copyright: Copyright &copy; 2022 Kelvin Joson
 theme:
   font: false
@@ -37,7 +39,7 @@ extra:
       link: https://www.linkedin.com/in/kelvinjoson/
   analytics:
     provider: google
-    property: G-G-9SYHV8CDG0
+    property: G-9SYHV8CDG0
   consent:
     title: Cookie consent
     description: >-

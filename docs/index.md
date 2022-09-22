@@ -1,3 +1,3 @@
 # Home
 
-## Welcome to Knowledge-Stack
+## Welcome to Knowledge-Stack by [Kelvin Joson](https://kelvinjoson.com)
