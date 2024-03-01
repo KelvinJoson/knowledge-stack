@@ -4,49 +4,71 @@ repo_url: https://github.com/KelvinJoson/knowledge-stack
 repo_name: KelvinJoson/knowledge-stack
 site_description: Knowledge-Stack by Kelvin Joson
 site_author: Kelvin Joson
-copyright: Copyright &copy; 2022 Kelvin Joson
+copyright: Copyright &copy; 2024 Kelvin Joson
+
 theme:
-  font: false
+  font:
+    text: Roboto
+    code: Roboto Mono
   name: material
-  # custom_dir: overrides
+  custom_dir: overrides
   icon:
-    logo: material/library
+    logo: material/alpha-k-box
     repo: fontawesome/brands/github
-    edit: material/file-document-edit
+    edit: material/file-edit-outline
   features:
+    - announce.dismiss
+    - navigation.tabs
+    #- navigation.tabs.sticky
+    - header.autohide
+    - content.tabs.link
     - navigation.instant
     - navigation.tracking
+    - navigation.top
+    #- navigation.expand
+    - search.share
+    - search.suggest
+    #- navigation.indexes
+    #- navigation.sections
+    - toc.follow
+    - toc.integrate
 
   palette:
     # Light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
+      primary: blue grey
+      accent: deep orange
       toggle:
-        icon: material/brightness-7
+        icon: material/brightness-5
         name: Switch to Dark Mode
     # Dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: blue grey
+      accent: deep orange
       toggle:
         icon: material/brightness-4
         name: Switch to Light Mode
 
 extra:
   social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/KelvinJoson
+    - icon: fontawesome/solid/envelope
+      link: mailto:kelvin@kelvinjoson.com
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/kelvinjoson/
+    - icon: fontawesome/brands/github
+      link: https://github.com/KelvinJoson
+
   analytics:
     provider: google
     property: G-9SYHV8CDG0
   consent:
     title: Cookie consent
     description: >-
-      We use cookies to recognize your repeated visits and preferences, as well
-      as to measure the effectiveness of our documentation and whether users
-      find what they're searching for. With your consent, you're helping us to
-      make our documentation better.
+      In order to monitor how well my home page is doing and whether visitors find what they are searching for, 
+      I use cookies to keep track of your preferences and repeat visits.
+      With your consent, you are assisting in improving this website.
 markdown_extensions:
   - admonition
   - nl2br
@@ -56,6 +78,7 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
@@ -63,6 +86,8 @@ markdown_extensions:
       generic: true
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
   - footnotes
   - def_list
   - pymdownx.critic
@@ -76,12 +101,12 @@ markdown_extensions:
 
 plugins:
   - search
-  - roamlinks
   - callouts
+  - roamlinks
+  - social
   - git-revision-date-localized:
       enable_creation_date: false
       type: timeago
-
 extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6

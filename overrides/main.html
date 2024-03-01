@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block announce %}
+<!-- Add announcement here, including arbitrary HTML -->
+<a href="https://www.linkedin.com/in/kelvinjoson" target="_blank" rel="noopener">
+    <strong>Connect with me on</strong>
+    <span class="twemoji linkedin">
+        {% include ".icons/fontawesome/brands/linkedin.svg" %}
+    </span>
+    <strong>LinkedIn</strong>
+</a>
+{% endblock %}
+
+{% block extrahead %}
+{% if page and page.meta and page.meta.image_path and page.meta.og_image %}
+<meta property="og:image:url" content="{{ config.site_url ~ page.meta.image_path ~ page.meta.og_image }}" />
+{% elif page and page.meta and page.meta.og_image %}
+<meta property="og:image:url" content="{{ page.meta.og_image }}" />
+{% else %}
+<meta property="og:image:url" content="{{ config.site_url ~ config.theme.favicon }}" />
+{% endif %}
+
+<meta name="facebook-domain-verification" content="ba68hzakrv0xahs5tv9hsycfe9pjpz" />
+<meta property="fb:app_id" content="{{ config.extra.analytics.fb_appid }}" />
+{% endblock %}
