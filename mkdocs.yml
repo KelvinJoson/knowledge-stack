@@ -1,7 +1,7 @@
-site_name: Knowledge-Stack
+site_name: Knowledge Stack
 site_url: https://knowledge-stack.kelvinjoson.com
-repo_url: https://github.com/KelvinJoson/knowledge-stack
-repo_name: KelvinJoson/knowledge-stack
+#repo_url: https://github.com/KelvinJoson/knowledge-stack
+#repo_name: KelvinJoson/knowledge-stack
 site_description: Knowledge-Stack by Kelvin Joson
 site_author: Kelvin Joson
 copyright: Copyright &copy; 2024 Kelvin Joson
@@ -13,7 +13,8 @@ theme:
   name: material
   custom_dir: overrides
   icon:
-    logo: material/alpha-k-box
+    #logo: material/alpha-k-box
+    logo: fontawesome/solid/user-astronaut
     repo: fontawesome/brands/github
     edit: material/file-edit-outline
   features:
@@ -22,13 +23,15 @@ theme:
     #- navigation.tabs.sticky
     - header.autohide
     - content.tabs.link
+    #- content.action.edit
+    #- content.action.view
     - navigation.instant
     - navigation.tracking
-    - navigation.top
+    #- navigation.top
     #- navigation.expand
     - search.share
     - search.suggest
-    #- navigation.indexes
+    - navigation.indexes
     #- navigation.sections
     - toc.follow
     - toc.integrate
@@ -59,6 +62,8 @@ extra:
       link: https://www.linkedin.com/in/kelvinjoson/
     - icon: fontawesome/brands/github
       link: https://github.com/KelvinJoson
+    - icon: fontawesome/solid/earth-asia
+      link: https://kelvinjoson.com
 
   analytics:
     provider: google
@@ -80,8 +85,8 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - attr_list
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.tasklist:
@@ -100,6 +105,8 @@ markdown_extensions:
       baselevel: 1
 
 plugins:
+  - tags:
+        tags: true
   - search
   - callouts
   - roamlinks
